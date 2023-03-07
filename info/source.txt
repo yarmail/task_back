@@ -1,0 +1,10 @@
+В работе над этим проектом я использовал:
+
+Связанные между собой курсы от javabegin:
+- Angular для начинающих
+- Новый пошаговый курс Angular_Java_Spring_Hibernate
+- Микросервисы на Spring
+
+Курс на ютубе:
+Установка PostgreSQL и pgAdmin (2021)
+https://www.youtube.com/watch?v=aLDMDR8FKuk&list=PL8X2nqRlWfaZRM65hqNbm-HYUAK9J7uOi

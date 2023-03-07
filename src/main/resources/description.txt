@@ -1,0 +1,13 @@
+Примечания к application.properties
+
+1. Чтобы файл настроек адекватно относился к русскому языку
+я изменяю кодировку файлов .properties
+Для этого я изменил следующую настройку:
+File - Settings - Editor - File Encodings
+Default encoding for properties files:
+Было: Properties Default: ISO-8859-1
+Стало: UTF-8
+
+2.  Помним что как правило нельзя передавать property в сеть
+Property надо помещать в .gitignore а пользователям показвать форму
+чтобы они заполняли её своими данными

@@ -1,0 +1,9 @@
+Основные инструменты проекта:
+Java 17
+Gradle 8.0
+Spring Boot 2.7.5
+Spring AOP
+Spring WEB
+Spring DATA
+Lombok
+Postman

@@ -1,0 +1,7 @@
+Сейчас у меня стоит java 17, для неё
+в файле gradle/wrapper/gradle-wrapper.properties
+меняем версию gradle на не ниже 7.3
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.3-bin.zip
+
+source:
+https://docs.gradle.org/current/userguide/compatibility.html

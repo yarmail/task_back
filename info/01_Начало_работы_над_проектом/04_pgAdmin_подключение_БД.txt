@@ -1,0 +1,13 @@
+Если правильно помню, Spring Boot не подключается
+пока нет подключения к базе, поэтому открываем
+pgAdmin, создаем базу данных task_back
+и подключаемся к ней в Idea
+
+
+Чтобы файл настроек адекватно относился к русскому языку
+я изменяю кодировку файлов .properties
+Для этого я изменил следующую настройку:
+File - Settings - Editor - File Encodings
+Default encoding for properties files:
+Было: Properties Default: ISO-8859-1
+Стало: UTF-8

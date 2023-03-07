@@ -1,0 +1,5 @@
+File > New > Project >
+Отмечаем java, gradle, задаем имя task-back
+
+Отдельно Gradle я не устанавливал, вероятно сработал
+gradle/wrapper/gradle-wrapper.jar
