@@ -1,56 +1,39 @@
 package task.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table(name = "stat")
 public class Stat {
+
+    @Id
+    @EqualsAndHashCode.Include
+    @Column(name = "id")
     private Integer id;
+
+    @Column(name = "completed_total")
     private Integer completedTotal;
+
+    @Column(name = "uncompleted_total")
     private Integer uncompletedTotal;
-
-    @Basic
-    @Column(name = "id", nullable = true)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Basic
-    @Column(name = "completed_total", nullable = true)
-    public Integer getCompletedTotal() {
-        return completedTotal;
-    }
-
-    public void setCompletedTotal(Integer completedTotal) {
-        this.completedTotal = completedTotal;
-    }
-
-    @Basic
-    @Column(name = "uncompleted_total", nullable = true)
-    public Integer getUncompletedTotal() {
-        return uncompletedTotal;
-    }
-
-    public void setUncompletedTotal(Integer uncompletedTotal) {
-        this.uncompletedTotal = uncompletedTotal;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Stat stat = (Stat) o;
-        return Objects.equals(id, stat.id) && Objects.equals(completedTotal, stat.completedTotal) && Objects.equals(uncompletedTotal, stat.uncompletedTotal);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, completedTotal, uncompletedTotal);
-    }
 }
+
+/*
+ Примечания
+
+ @Id - в таблице нет первичного ключа, там одна строка
+ Эта аннотация - дань Хибернейту
+
+ Пока непонятно, зачем здесь прописывать
+ поля  completedTotal, uncompletedTotal,
+ по проекту они заполняются триггерами БД
+
+ */

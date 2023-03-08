@@ -1,65 +1,44 @@
 package task.entity;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.Objects;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table(name = "priority")
 public class Priority {
-    private Integer id;
-    private String title;
-    private String color;
-    private Collection<Task> tasksById;
 
     @Id
-    @Column(name = "id", nullable = false)
-    public Integer getId() {
-        return id;
-    }
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
+    @Column(name = "id")
+    private Integer id;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    @Column(name = "title")
+    private String title;
 
-    @Basic
-    @Column(name = "title", nullable = false, length = -1)
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Basic
-    @Column(name = "color", nullable = false, length = -1)
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Priority priority = (Priority) o;
-        return Objects.equals(id, priority.id) && Objects.equals(title, priority.title) && Objects.equals(color, priority.color);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, color);
-    }
-
-    @OneToMany(mappedBy = "priorityByPriorityId")
-    public Collection<Task> getTasksById() {
-        return tasksById;
-    }
-
-    public void setTasksById(Collection<Task> tasksById) {
-        this.tasksById = tasksById;
-    }
+    @Column(name = "color")
+    private String color;
 }
+
+/*
+Примечания
+
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode.Include
+Эквалс и хешкод делаем по id, т.к. этого достаточно
+и быстро
+
+Убрал сгенерированное поле
+private Collection<Task> tasksById;
+и все методы с ним связанные, т.к.
+как я пониамаю, при работе с этим объектом,
+не нужно чтобы он подтягивал все зависимости
+в таблице task
+ */
