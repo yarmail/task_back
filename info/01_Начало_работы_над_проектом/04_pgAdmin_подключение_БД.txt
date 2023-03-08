@@ -15,8 +15,7 @@ Default encoding for properties files:
 После подключения базы данных вы можете
 создать визуализацию базы данных
 кликнув правой кнопкой мыши на базе данных
-и вызвав Diagrams > Show Visualisation
+и вызвав: Diagrams > Show Visualisation
 (см. db_show_visual.png)
 В результате вы увидите схему базы данных
 (см. db_structure.png)
-
