@@ -1,5 +1,11 @@
 <h3> Монолитный Rest сервис - Backend Проекта TaskList (список задач) </h3> 
 
+Описание: сервис позволяет хранить и делать все основные операции с задачами. <br> 
+У задач есть категория и приоритет. Можно проводить поиск по задачам (по всем параметрам), 
+с постраничностью и сортировкой. <br>
+С помощью триггеров можно проводить статистику по категориям и в общем.
+
+
 <details>
 <summary>Примечание: информация о проекте</summary>
 Большая часть информация о проекте: примечания, описания, 
@@ -9,18 +15,18 @@
 </details>
 
 <details>
-<summary>Инструменты</summary>
-Windows 7 x64, Java 17, Gradle 8 <br>
-PostgreSQL 13.10 (в проект добавлены функции и триггеры) <br>  
-pgAdmin v.4.30
+<summary>Инструменты и технологии</summary>
+Windows 7 x64, Java 17, Gradle 8, pgAdmin v.4.30<br>
+PostgreSQL 13.10 (в проект добавлены функции и триггеры) <br>
+Spring Boot, Spring Web, Rest<br>
+Spring Data JPA, JPQL, JPA Named Queries<br>
+
 </details>
 
 <details>
 <summary>Схема базы данных</summary>
 <img src="/info/01_Начало_работы_над_проектом/db_structure.png">
 </details>
-
-
 
 <details>
 <summary>Примечание: спасибо</summary>
