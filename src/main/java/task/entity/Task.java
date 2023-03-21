@@ -51,4 +51,9 @@ public class Task {
 
 @ManyToOne
 Много задач имеют один приоритет и одну категорию
+
+@JoinColumn(name = "priority_id", referencedColumnName = "id")
+Благодаря этой связке при добавлении новых составных объектов
+Hibernate возьмет поле id у Priority и в таблице Task
+сохранит сохранит его в поле priority_id.
  */
