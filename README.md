@@ -26,13 +26,14 @@ Spring Data JPA, JPQL, JPA Named Queries<br>
 <details>
 <summary>Схема базы данных</summary>
 <img src="/info/01_Начало_работы_над_проектом/db_structure.png">
-</details>
+</details> <br>
+
+Тестирование проекта <br>
+<a href="/info/test/TEST.MD"> Проводим выборочное тестирование</a>
+с помощью программы Postman
 
 <details>
 <summary>Примечание: спасибо</summary>
 Спасибо вам за проявленный интерес к проекту.
 Надеюсь проект дал вам что-то полезное.
 </details>
-
-
-
